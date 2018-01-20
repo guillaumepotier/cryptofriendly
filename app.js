@@ -11,9 +11,13 @@ var search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search',
-    placeholder: 'Search for sites',
+    placeholder: 'Search anything (country, coin name, e-commerce category...)',
     poweredBy: true,
-    reset: true
+    reset: true,
+    cssClasses: {
+      root: 'form-root',
+      input: 'form-control form-control-lg'
+    }
   })
 );
 
@@ -21,15 +25,29 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
-      empty: 'No results',
-      item: '<em>Hit {{objectID}}</em>: {{{_highlightResult.name.value}}}'
+      empty: document.getElementById('no_results_template').innerHTML,
+      item: document.getElementById('hit_template').innerHTML
+    },
+    transformData: function (hit) {
+      console.log(hit)
+
+      return hit
     }
   })
 );
 
+// initialize pagination
 search.addWidget(
-  instantsearch.widgets.stats({
-    container: '#stats'
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+    maxPages: 20
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+    container: '#refinement-list',
+    attributeName: 'categories'
   })
 );
 
