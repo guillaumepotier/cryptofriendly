@@ -147,3 +147,20 @@ footer.footer {
   padding-top: 2rem;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 90% !important;
+  }
+}
+
+.hit-row {
+  background-color: #edeff2;
+  border: 1px solid #edeff2;
+  min-height: 3rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  border-radius: 2px;
+  padding: 4px;
+  margin-bottom: 5px;
+}

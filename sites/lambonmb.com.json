@@ -1,0 +1,17 @@
+[{
+  "objectID": "lambonb.com",
+  "name": "Lamborghini Newport Beach",
+  "url": "https://www.lambonb.com/",
+  "description": "Lambdo cars reseller",
+  "allowed_currencies": [
+    "BTC",
+    "ETH"
+  ],
+  "categories": [
+    "cars",
+    "lambo"
+  ],
+  "type": "offline",
+  "address": "1425 Baker Street, Costa Mesa, CA 92626",
+  "country": "USA"
+}]

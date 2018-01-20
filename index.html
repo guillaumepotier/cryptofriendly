@@ -195,21 +195,23 @@
       </div>
     </footer>
 
-    <script type="text/javascript">
-      Array.prototype.pluck = function(key) {
-        return this.map(function(object) { return object[key]; });
-      };
-    </script>
-
     <script id="no_results_template" type="x-tmpl-mustache">
       <p class="info">No results were found with your current filters. Try to remove some filters or change the search query.</p>
     </script>
 
     <script id="hit_template" type="x-tmpl-mustache">
-      <div class="row">
-        <div class="col-4">{{{_highlightResult.name.value}}}</div>
-        <div class="col-4">{{{_highlightResult.description.value}}}</div>
-        <div class="col-4">{{{_highlightResult.allowed_currencies.pluck('value').join(', ')}}}</div>
+      <div class="row hit-row">
+        <div class="col col-2">
+          {{#hasLink}}
+            <a href="{{url}}" target="_blank">{{{_highlightResult.name.value}}}</a>
+          {{/hasLink}}
+          {{^hasLink}}
+            {{{_highlightResult.name.value}}}
+          {{/hasLink}}
+          </div>
+        <div class="col col-4">{{{_highlightResult.description.value}}}</div>
+        <div class="col col-3">{{{_highlightResult.categories}}}</div>
+        <div class="col col-3">{{{_highlightResult.allowed_currencies}}}</div>
       </div>
     </script>
 

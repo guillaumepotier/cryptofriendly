@@ -8,6 +8,10 @@ var search = instantsearch({
   }
 });
 
+Array.prototype.pluck = function(key) {
+  return this.map(function(object) { return object[key]; });
+};
+
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search',
@@ -29,6 +33,11 @@ search.addWidget(
       item: document.getElementById('hit_template').innerHTML
     },
     transformData: function (hit) {
+      hit.hasLink = hit.url.length
+      hit._highlightResult.categories = hit._highlightResult.categories.pluck('value').join(', ');
+      hit._highlightResult.allowed_currencies = hit._highlightResult.allowed_currencies.pluck('value').join(', ');
+
+
       console.log(hit)
 
       return hit

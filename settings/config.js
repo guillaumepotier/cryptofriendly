@@ -4,9 +4,9 @@ var config = {
   searchApiKey: 'df2cc4240e867bf73205160e8eccbb9e'
 }
 
-if (window) {
-  window.config = config
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = config;
 } else {
-  module.exports = config
+  window.config = config;
 }
 
