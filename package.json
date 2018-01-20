@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "algoliasearch": "^3.24.9",
+    "prop-types": "^15.6.0",
+    "yamljs": "^0.3.0"
+  }
+}

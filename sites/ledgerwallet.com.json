@@ -1,0 +1,14 @@
+[{
+  "name": "Ledger Wallet",
+  "url": "https://ledgerwallet.com",
+  "description": "Hardware crypto wallet",
+  "allowed_currencies": [
+    "BTC"
+  ],
+  "categories": [
+    "crypto",
+    "wallet",
+    "hardware"
+  ],
+  "country": "France"
+}]

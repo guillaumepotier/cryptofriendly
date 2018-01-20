@@ -1,0 +1,13 @@
+[{
+  "name": "Gandi",
+  "url": "https://gandi.net",
+  "description": "Domain names and hosting since 1999",
+  "allowed_currencies": [
+    "BTC"
+  ],
+  "categories": [
+    "hosting",
+    "domain names"
+  ],
+  "country": "France"
+}]
