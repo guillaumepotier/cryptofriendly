@@ -1,3 +1,12 @@
-module.exports = {
-  appId: 'W7PTXBX6RP'
+var config = {
+  index: 'sites',
+  appId: 'W7PTXBX6RP',
+  searchApiKey: 'df2cc4240e867bf73205160e8eccbb9e'
 }
+
+if (window) {
+  window.config = config
+} else {
+  module.exports = config
+}
+

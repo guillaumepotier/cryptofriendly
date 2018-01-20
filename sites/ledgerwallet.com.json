@@ -1,4 +1,5 @@
 [{
+  "objectID": "ledgerwallet.com",
   "name": "Ledger Wallet",
   "url": "https://ledgerwallet.com",
   "description": "Hardware crypto wallet",
@@ -10,5 +11,7 @@
     "wallet",
     "hardware"
   ],
+  "type": "online",
+  "address": "",
   "country": "France"
 }]

@@ -13,7 +13,7 @@ if (!apiKey) {
 }
 
 const client = algoliasearch(config.appId, apiKey)
-const index = client.initIndex('sites')
+const index = client.initIndex(config.index)
 
 fs.readdir(sitesPath, (error, files) => {
   files.forEach(file => {

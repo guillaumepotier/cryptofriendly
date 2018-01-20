@@ -1,4 +1,5 @@
 [{
+  "objectID": "gandi.net",
   "name": "Gandi",
   "url": "https://gandi.net",
   "description": "Domain names and hosting since 1999",
@@ -9,5 +10,7 @@
     "hosting",
     "domain names"
   ],
+  "type": "online",
+  "address": "",
   "country": "France"
 }]
